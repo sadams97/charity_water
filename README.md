@@ -1,2 +1,3 @@
 # charity_water
-Charity Water marketing campaign
+Charity Water marketing campaign to generate monthly subscribers.
+
