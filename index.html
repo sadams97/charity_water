@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>From Latte to Lifeline</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Home">
+        <img src="charity_logo.png" alt="charity: water logo" height="32">
+      
+      </a>
+      <nav class="nav"><a class="nav-link" href="#give">Give Monthly</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero (full screen) -->
+    <section class="hero" role="banner" aria-label="Clean water campaign">
+      <img class="hero-bg" src="hero.jpg" alt="Girl drinking clean water, rural village background">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <h1 class="hero-title">From Latte to Lifeline</h1>
+        <p class="hero-subtitle">Give a lifeline for the cost of your two daily brews.</p>
+        <a href="#give" class="btn btn-primary">Join The Spring</a>
+      </div>
+    </section>
+
+    <!-- Donation (centered copy) -->
+    <section id="give" class="give">
+      <div class="container">
+        <header class="give-header">
+          <h2>Give clean and safe water every month</h2>
+          <p class="lead">Clean water fuels health, education, and opportunity. Your monthly gift helps.</p>
+          <p class="muted">Choose a monthly amount. See your impact instantly.</p>
+        </header>
+
+        <form id="donation-form" class="donation" onsubmit="return false;">
+          <fieldset class="amounts">
+            <legend class="sr-only">Monthly donation amount</legend>
+
+            <label class="amount-card">
+              <input type="radio" name="amount" value="5" data-people="1" checked>
+              <span class="amount-content">
+                <span class="price"><sup>$</sup>5<span class="per">/mo</span></span>
+                <span class="impact">1 person / year</span>
+              </span>
+            </label>
+
+            <label class="amount-card">
+              <input type="radio" name="amount" value="10" data-people="3">
+              <span class="amount-content">
+                <span class="price"><sup>$</sup>10<span class="per">/mo</span></span>
+                <span class="impact">3 people / year</span>
+              </span>
+            </label>
+
+            <label class="amount-card amount-other">
+              <input type="number" min="1" step="1" name="other" placeholder="Other" aria-label="Other monthly amount">
+              <span class="amount-content">
+                <span class="price other"><sup>$</sup><span class="other-val">—</span><span class="per">/mo</span></span>
+                <span class="impact other-impact">Your impact updates below</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <p class="impact-line" aria-live="polite">
+            Your <strong>$<span id="impact-amount">5</span>.00</strong> monthly donation can give
+            <strong><span id="impact-people">1</span> person</strong> clean water every year.
+          </p>
+
+          <div class="actions">
+            <button type="button" id="join-btn" class="btn btn-primary">Join Monthly</button>
+            <a href="#" class="btn btn-secondary">Give once</a>
+          </div>
+
+          <p class="fineprint">100% funds water projects. This demo does not process payments.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Clean Water Campaign</p>
+      <a class="foot-link" href="#give">Give Monthly</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+ 
+
